@@ -1,0 +1,47 @@
+# Gitleaks Configuration File
+
+# Global configuration options
+[general]
+  # Define the path to the files you want to scan. Use globs.
+  # Example: ["**/*.go", "**/*.js", "**/*.py"]
+  # Default is to scan all files.
+  # path = ["**/*"]
+
+# Define rules for detecting secrets
+[rules]
+  # Define a rule to detect AWS keys
+  [[rules]]
+  description = "Detect AWS Access Key"
+  regex = '''AKIA[0-9A-Z]{16}'''
+  tags = ["aws", "key"]
+
+  # Define a rule to detect AWS Secret Key
+  [[rules]]
+  description = "Detect AWS Secret Key"
+  regex = '''(?:AQICAH|ASIA)[A-Z0-9+/=]{84}'''
+  tags = ["aws", "secret"]
+
+  # Define a rule to detect generic private key patterns
+  [[rules]]
+  description = "Detect Private Key"
+  regex = '''-----BEGIN (?:ENCRYPTED )?PRIVATE KEY-----'''
+  tags = ["key", "private"]
+
+  # Add more rules as needed
+
+# Allowlisted secrets (for rules you want to allow)
+[[rules.allowlist]]
+description = "Allowlist example"
+regex = '''(some-regex-pattern)'''
+
+# Paths that should be excluded from scans
+[allowlist]
+  # List paths to exclude from scanning
+  # Example: ["path/to/excluded/file", "another/path/to/exclude"]
+  path = ["node_modules/*", "build/*"]
+
+# Configure the severity levels
+[severity]
+  # Configure the severity levels for detected secrets
+  # Example: [info, warning, error]
+  level = ["error"]
