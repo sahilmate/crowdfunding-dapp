@@ -1,5 +1,5 @@
 
-[![Gitleaks](https://github.com/sahilmate/crowdfunding-dapp/actions/workflows/gitleaks.yml/badge.svg)](https://gitAAhub.com/sahilmate/crowdfunding-dapp/actions/workflows/gitleaks.yml)
+[![Gitleaks](https://github.com/sahilmate/pledge-pulse/actions/workflows/gitleaks.yml/badge.svg)](https://gitAAhub.com/sahilmate/crowdfunding-dapp/actions/workflows/gitleaks.yml)
 
 # Pledge Pulse
 
