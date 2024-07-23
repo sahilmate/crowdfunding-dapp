@@ -10,16 +10,19 @@ on:
 
 jobs:
   gitleaks:
-    name: Run Gitleaks
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Install Gitleaks
-        uses: gitleaks/gitleaks-action@v2.3.6
-
       - name: Run Gitleaks
         uses: gitleaks/gitleaks-action@v2.3.6
         with:
-          config: '.github/workflows/.gitleaks.toml'
+          # Remove the 'config' input if it was included previously
+          args: detect --redact -v --exit-code=2 --report-format=sarif --report-path=results.sarif --log-level=debug --log-opts=-1
+          
+      - name: Upload Gitleaks results
+        uses: actions/upload-artifact@v3
+        with:
+          name: gitleaks-results
+          path: results.sarif
