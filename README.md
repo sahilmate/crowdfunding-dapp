@@ -1,6 +1,7 @@
 
-```markdown
-# Crowdfunding dApp
+[![Gitleaks](https://github.com/sahilmate/crowdfunding-dapp/actions/workflows/gitleaks.yml/badge.svg)](https://gitAAhub.com/sahilmate/crowdfunding-dapp/actions/workflows/gitleaks.yml)
+
+# Pledge Pulse
 
 A decentralized crowdfunding platform built using Next.js, React, Hardhat, and Tailwind CSS.
 
@@ -19,7 +20,7 @@ A decentralized crowdfunding platform built using Next.js, React, Hardhat, and T
 
 ## Introduction
 
-Crowdfunding dApp is a decentralized application (dApp) that allows users to create and participate in crowdfunding campaigns using Ethereum blockchain. 
+Pledge Pulse is a decentralized application (dApp) that allows users to create and participate in crowdfunding campaigns using the Ethereum blockchain. 
 
 ## Features
 
@@ -32,8 +33,8 @@ Crowdfunding dApp is a decentralized application (dApp) that allows users to cre
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/yourusername/crowdfunding-dapp.git
-   cd crowdfunding-dapp
+   git clone https://github.com/yourusername/pledge-pulse.git
+   cd pledge-pulse
    ```
 
 2. **Install dependencies:**
@@ -88,7 +89,7 @@ npx hardhat run --network <network-name> scripts/deploy.js
 ## Project Structure
 
 ```plaintext
-crowdfunding-dapp/
+pledge-pulse/
 ├── contracts/
 │   └── Crowdfunding.sol        # Solidity contract
 ├── pages/
@@ -161,6 +162,5 @@ Contributions are welcome! Please open an issue or submit a pull request for any
 ## License
 
 This project is licensed under the MIT License.
-```
 
-Would you like to make any adjustments or additions to this `README.md` template?
+
